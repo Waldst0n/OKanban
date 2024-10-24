@@ -9,7 +9,7 @@ const TasksGroupCard = ({ color, situation, status }) => {
     red: 'bg-red',
     grayNote: 'bg-grayNote',
   };
-  const notStartedTask = useMemo(() => {
+  const filteredTasks = useMemo(() => {
     return taskCards.filter(task => task.status === status);
   }, [status]);
 
@@ -21,7 +21,7 @@ const TasksGroupCard = ({ color, situation, status }) => {
         <h2 className="text-white">{situation}</h2>
       </div>
       <div>
-        {notStartedTask.map(task => (
+        {filteredTasks.map(task => (
           <TaskCard key={task.id} name={task.name} status={task.status} />
         ))}
       </div>
