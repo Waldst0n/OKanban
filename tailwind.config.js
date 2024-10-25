@@ -12,7 +12,7 @@ export default {
       primaryColor: '#0060b9',
       secondaryColor: '#314c53',
       tertiaryColor: '#d0d4e4',
-      boardColor: '#fafbfd',
+      boardColor: '#fafbff',
       white: '#fff',
       gray: '#dcdfec',
       black: '#eceff8',
