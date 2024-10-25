@@ -6,7 +6,7 @@ import { TaskProvider } from '../context/TaskContext'; // ajuste o caminho confo
 const TasksBoard = () => {
   return (
     <TaskProvider>
-      <div className="w-full flex mb-4 flex-wrap justify-start p-4 rounded-tl-xl shadow h-screen bg-white">
+      <div className="w-full flex  flex-wrap justify-center xl:justify-start p-2 rounded-tl-xl shadow h-screen bg-white">
         <TasksGroupCard color="green" situation="Feito" status="done" />
         <TasksGroupCard
           color="yellow"
