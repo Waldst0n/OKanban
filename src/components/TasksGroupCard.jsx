@@ -18,11 +18,11 @@ const TasksGroupCard = ({ color, situation, status }) => {
   }, [tasks, status]);
 
   return (
-    <div className="  rounded-t-xl min-w-64 xl:h-5/6   mt-4 ml-2 mr-4  bg-gray">
+    <div className=" overflow-y-auto rounded-t-xl min-w-64 xl:h-5/6 drop-shadow-sm   mt-8 ml-2 mr-4  bg-gray">
       <div
         className={`flex   justify-between rounded-t-xl ${bgColorClasses[color]} p-2 size-10 w-full`}
       >
-        <h2 className="text-white">{situation}</h2>
+        <h2 className="text-white font-semibold">{situation}</h2>
       </div>
       <div>
         {filteredTasks.map(task => (

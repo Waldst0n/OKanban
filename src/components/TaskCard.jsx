@@ -11,10 +11,10 @@ const TaskCard = ({ name, status, updateStatus }) => {
   };
 
   return (
-    <div className="w-11/12 m-2 p-4 h-28 bg-white border-2 rounded-lg border-gray">
+    <div className="w-11/12 m-2 p-2 h-28 drop-shadow-sm bg-white border-2 rounded-lg border-gray">
       <h3>{name}</h3>
 
-      <div className="flex">
+      <div className="flex h-full justify-end place-items-end pb-6  ">
         <CardButton
           status="done"
           color="bg-green"
