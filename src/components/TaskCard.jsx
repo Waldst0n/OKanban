@@ -23,7 +23,7 @@ const TaskCard = ({ name, status, updateStatus }) => {
           className="h-6 w-6 text-red  rounded-md text-white transition-transform hover:scale-105 drop-shadow-lg"
           onClick={() => deleteTask(name)}
         >
-          <FaTrashAlt />
+          <FaTrashAlt className="text-red" />
         </button>
       </div>
 
