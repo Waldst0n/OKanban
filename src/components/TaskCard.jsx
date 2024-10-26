@@ -1,18 +1,31 @@
 // src/components/TaskCard.jsx
 import CardButton from './CardButton';
+import { useTasks } from '../context/TaskContext';
+
 import { MdOutlineDoneAll } from 'react-icons/md';
 import { VscDebugStart } from 'react-icons/vsc';
 import { CiStop1 } from 'react-icons/ci';
 import { MdOutlineNotStarted } from 'react-icons/md';
+import { FaTrashAlt } from 'react-icons/fa';
 
 const TaskCard = ({ name, status, updateStatus }) => {
+  const { tasks, deleteTask } = useTasks();
+
   const handleChangeStatus = newStatus => {
     updateStatus(name, newStatus);
   };
 
   return (
-    <div className="w-11/12 m-2 p-2 h-28 drop-shadow-sm bg-white border-2 rounded-lg border-gray">
-      <h3>{name}</h3>
+    <div className="w-64 m-2 p-2 h-32 drop-shadow-sm bg-white border-2 rounded-lg border-gray">
+      <div className="flex items-center justify-between">
+        <h3>{name}</h3>
+        <button
+          className="h-6 w-6 text-red  rounded-md text-white transition-transform hover:scale-105 drop-shadow-lg"
+          onClick={() => deleteTask(name)}
+        >
+          <FaTrashAlt />
+        </button>
+      </div>
 
       <div className="flex h-full justify-end place-items-end pb-6  ">
         <CardButton

@@ -31,8 +31,18 @@ export const TaskProvider = ({ children }) => {
     );
   };
 
+  const deleteTask = taskName => {
+    setTasks(prevTasks => {
+      const updatedTasks = prevTasks.filter(task => task.name !== taskName);
+      localStorage.setItem('taskCard', JSON.stringify(updatedTasks)); // Atualiza o localStorage
+      return updatedTasks;
+    });
+  };
+
   return (
-    <TaskContext.Provider value={{ tasks, addTask, updateTaskStatus }}>
+    <TaskContext.Provider
+      value={{ tasks, addTask, updateTaskStatus, deleteTask }}
+    >
       {children}
     </TaskContext.Provider>
   );
