@@ -5,12 +5,12 @@ import AddTasks from './AddTasks';
 
 const TasksBoard = () => {
   return (
-    <>
+    <TaskProvider>
       <div className=" flex flex-col  bg-white">
         <div className="flex h-10 p-2 mt-2 w-full items-center ">
           <AddTasks />
         </div>
-        <div className="w-full flex flex-wrap justify-center xl:justify-start p-2 rounded-tl-xl shadow h-screen">
+        <div className=" overflow-auto w-full flex flex-wrap justify-center xl:justify-start p-2 rounded-tl-xl shadow h-screen">
           <TasksGroupCard color="green" situation="Feito" status="done" />
           <TasksGroupCard
             color="yellow"
@@ -25,7 +25,7 @@ const TasksBoard = () => {
           />
         </div>
       </div>
-    </>
+    </TaskProvider>
   );
 };
 

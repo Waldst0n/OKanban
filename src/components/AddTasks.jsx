@@ -18,10 +18,10 @@ const AddTasks = () => {
   };
 
   return (
-    <div className=" flex items-center  w-full mt-2 border-b-2 border-gray p-4">
-      <form onSubmit={handleAddTask} className=" flex gap-4">
+    <div className=" flex items-center justify-center md:justify-start  w-full mt-2 border-b-2 border-gray p-4">
+      <form onSubmit={handleAddTask} className=" flex    gap-2">
         <input
-          className=" h-8 border-2 p-1 rounded-md focus:outline-none border-primaryColor"
+          className=" h-8 border-2   rounded-md focus:outline-none border-primaryColor"
           type="text"
           value={textInput}
           name=""

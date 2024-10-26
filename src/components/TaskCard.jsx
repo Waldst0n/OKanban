@@ -16,7 +16,7 @@ const TaskCard = ({ name, status, updateStatus }) => {
   };
 
   return (
-    <div className="w-64 m-2 p-2 h-32 drop-shadow-sm bg-white border-2 rounded-lg border-gray">
+    <div className="w-60 m-2 p-2 h-32 drop-shadow-sm bg-white border-2 rounded-lg border-gray">
       <div className="flex items-center justify-between">
         <h3>{name}</h3>
         <button
